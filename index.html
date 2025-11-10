@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMI-laskuri</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>BMI-laskuri</h1>
+
+    <form id="bmiForm">
+      <label>
+        Pituus (cm)
+        <input id="height" type="number" min="50" max="250" required />
+      </label>
+
+      <label>
+        Paino (kg)
+        <input id="weight" type="number" min="10" max="400" step="0.1" required />
+      </label>
+
+      <button type="submit">Laske</button>
+    </form>
+
+    <div id="result" aria-live="polite"></div>
+    <p class="hint">Kaava: BMI = paino(kg) / (pituus(m))²</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
